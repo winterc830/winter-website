@@ -317,8 +317,8 @@
       });
       const img = panel.querySelector("img");
       if (img) {
-        gsap.fromTo(img, { xPercent: -5, scale: 1.12 }, {
-          xPercent: 5, scale: 1.12, ease: "none",
+        gsap.fromTo(img, { xPercent: -3, scale: 1.1 }, {
+          xPercent: 3, scale: 1.1, ease: "none",
           scrollTrigger: { trigger: panel, containerAnimation: pan, start: "left right", end: "right left", scrub: true },
         });
       }

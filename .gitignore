@@ -2,3 +2,5 @@
 .playwright-cli/
 .vercel
 node_modules
+
+.vercel

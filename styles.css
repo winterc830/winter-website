@@ -143,9 +143,9 @@ em { font-style: italic; color: var(--ice); }
   padding: 120px var(--gutter);
 }
 .statement__text {
-  margin: 0; max-width: 22ch;
+  margin: 0; max-width: none;
   font-family: var(--display); font-variation-settings: "wdth" 100; font-weight: 400;
-  font-size: clamp(34px, 5.4vw, 84px); line-height: 1.04; letter-spacing: -.03em;
+  font-size: clamp(40px, 8.4vw, 140px); line-height: 1.04; letter-spacing: -.03em;
   margin-left: 12vw;
 }
 .statement__text .w { opacity: .14; transition: none; }

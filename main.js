@@ -291,10 +291,10 @@
 
   /* ---------------- Statement: words light up in reading order ---------------- */
   const text = document.querySelector("[data-words]");
-  text.innerHTML = text.textContent.trim().split(/\s+/).map((w) => `<span class="w">${w}</span>`).join(" ");
+  text.innerHTML = text.textContent.trim().split(/\s+/).map((w) => `<span class="w">${w}</span>` + (w.endsWith(".") ? "<br>" : "")).join(" "); // one sentence per line
   gsap.to(text.querySelectorAll(".w"), {
-    opacity: 1, ease: "none", stagger: 0.12,
-    scrollTrigger: { trigger: ".statement", start: "top top", end: "+=130%", pin: ".statement__pin", scrub: 0.6 },
+    opacity: 1, ease: "none", stagger: 0.2,
+    scrollTrigger: { trigger: ".statement", start: "top top", end: "+=80%", pin: ".statement__pin", scrub: 0.6 },
   });
 
   /* ---------------- Work: pinned horizontal pan (desktop only) ---------------- */

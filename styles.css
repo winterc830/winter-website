@@ -100,6 +100,7 @@ em { font-style: italic; color: var(--ice); }
   font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
   color: var(--ink-2); margin: 0;
 }
+.hero .eyebrow { color: var(--ink); font-size: 13px; text-shadow: 0 0 14px #0a0b0d, 0 0 4px #0a0b0d; }
 
 /* ---------- 1. Hero ---------- */
 .hero {
@@ -126,7 +127,7 @@ em { font-style: italic; color: var(--ice); }
 }
 .hero__copy::before { /* soft scrim so copy stays readable over the dots */
   content: ""; position: absolute; inset: -80px -120px -60px -80px; z-index: -1;
-  background: radial-gradient(closest-side, rgb(10 11 13 / .85), transparent);
+  background: radial-gradient(closest-side, rgb(10 11 13 / .92), rgb(10 11 13 / .6) 55%, transparent);
   pointer-events: none;
 }
 .hero__sub {

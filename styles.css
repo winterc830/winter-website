@@ -167,7 +167,6 @@ em { font-style: italic; color: var(--ice); }
 .work__progress span { display: block; height: 100%; width: 100%; background: var(--ink); transform-origin: left; transform: scaleX(0); }
 
 .panel { flex: 0 0 auto; display: grid; gap: 22px; align-self: center; }
-.panel--offset { align-self: center; transform: translateY(4vh); }
 .panel__frame {
   margin: 0; overflow: hidden; border-radius: 2px; background: var(--bg-2);
   position: relative;
@@ -179,13 +178,8 @@ em { font-style: italic; color: var(--ice); }
   transition: filter 1.1s var(--ease);
 }
 .panel.is-active .panel__frame img { filter: grayscale(0) brightness(1); }
-.panel__frame--wide { width: min(56vw, 860px); aspect-ratio: 16 / 10; }
-.panel__frame--pano { width: min(56vw, 860px); aspect-ratio: 814 / 390; }
-.panel__frame--tall { /* height-capped so title, text and tags always fit inside the pinned viewport */
-  width: min(34vw, 520px, calc((100dvh - 340px - 4vh) * .8)); aspect-ratio: 4 / 5;
-}
-.panel__frame--square { width: min(42vw, 620px); aspect-ratio: 5 / 4; }
-.panel__frame--type { width: min(42vw, 620px); aspect-ratio: 5 / 4; display: grid; place-items: end start; }
+.panel__frame { width: min(46vw, 720px, calc((100dvh - 300px) * 1.6)); aspect-ratio: 16 / 10; } /* one size for every project */
+.panel__frame--type { display: grid; place-items: end start; }
 .panel__frame--type canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
 .panel__big {
   position: relative; margin: 0; padding: clamp(20px, 3vw, 40px);
@@ -284,8 +278,8 @@ em { font-style: italic; color: var(--ice); }
   .work__track { flex-direction: column; align-items: stretch; height: auto; width: auto; padding: 96px var(--gutter); gap: 72px; }
   .work__intro { width: auto; }
   .work__progress { display: none; }
-  .panel, .panel--offset { transform: none; }
-  .panel__frame--wide, .panel__frame--pano, .panel__frame--tall, .panel__frame--square, .panel__frame--type { width: 100%; }
+  
+  .panel__frame { width: 100%; }
   .panel__frame img { filter: none; }
   .make { min-height: auto; padding-top: 50vh; }
   .make__inner { grid-template-columns: 1fr; }

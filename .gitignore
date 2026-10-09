@@ -1,0 +1,4 @@
+.claude/
+.playwright-cli/
+.vercel
+node_modules
